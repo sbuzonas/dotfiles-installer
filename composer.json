@@ -1,0 +1,50 @@
+{
+  "name": "slbmeh/dotfiles",
+  "description": "PHP Driven Configuration Management",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Steve Buzonas",
+      "email": "steve@fancyguy.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "composer/composer": "1.0.x-dev",
+    "jms/serializer": "~0.16.0",
+    "psr/log": "~1.0",
+    "symfony/console": "~2.6",
+    "symfony/filesystem": "~2.6",
+    "symfony/finder": "~2.6",
+    "symfony/process": "~2.6",
+    "twig/twig": "~1.17"
+  },
+  "require-dev": {
+    "mockery/mockery": "~0.9.3",
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "Dotfiles": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "Dotfiles\\Test": "tests/"
+    }
+  },
+  "bin": ["bin/dotfiles"],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "Dotfiles\\Composer\\EventHandler::postCreateProject"
+    ],
+    "test": "vendor/bin/phpunit",
+    "grunt": "node_modules/grunt-cli/bin/grunt"
+  }
+}
