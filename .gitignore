@@ -1,0 +1,7 @@
+vendor/
+dotfiles.phar
+
+# Local Variables:
+# coding: utf-8
+# mode: gitignore
+# End:
