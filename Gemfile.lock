@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/slbmeh/guard-phpunit2.git
+  remote: https://github.com/slbmeh/guard-phpunit2.git
   revision: 1c5b2356da266971bc2b27d32418ad9ce1d050f2
   branch: develop
   specs:
@@ -13,7 +13,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
-    ffi (1.9.6)
+    ffi (1.15.5)
     formatador (0.2.5)
     growl (1.0.3)
     guard (2.11.1)
